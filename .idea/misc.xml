@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/compose-model-1652653250888.xml" value="0.22314814814814815" />
+        <entry key="../../../../../layout/compose-model-1652665749485.xml" value="0.67" />
+        <entry key="../../../../../layout/compose-model-1652665824843.xml" value="0.33" />
+        <entry key="../../../../../layout/compose-model-1652666669720.xml" value="0.5" />
+        <entry key="../../../../../layout/compose-model-1652670953235.xml" value="0.5" />
+        <entry key="../../../../../layout/compose-model-1652674902651.xml" value="0.29307432432432434" />
+        <entry key="../../../../../layout/compose-model-1652674911536.xml" value="0.1" />
+        <entry key="../../../../../layout/compose-model-1652675029096.xml" value="0.29307432432432434" />
+        <entry key="../../../../../layout/compose-model-1652675034121.xml" value="0.29307432432432434" />
         <entry key="../../../../layout/compose-model-1636726499148.xml" value="0.9214092140921409" />
         <entry key="../../../../layout/compose-model-1636727977585.xml" value="0.9119241192411924" />
         <entry key="../../../../layout/compose-model-1636728846049.xml" value="0.9065040650406504" />
@@ -308,6 +317,7 @@
         <entry key="../../../../layout/compose-model-1645030744857.xml" value="0.1" />
         <entry key="../../../../layout/compose-model-1645037172891.xml" value="0.32728040540540543" />
         <entry key="../../../../layout/compose-model-1645084500774.xml" value="0.4398148148148148" />
+        <entry key="../../../../layout/compose-model-1645184648023.xml" value="0.1" />
         <entry key="authentication/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21770833333333334" />
         <entry key="authentication/src/main/res/drawable/ic_launcher_background.xml" value="0.21770833333333334" />
         <entry key="authentication/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21770833333333334" />
