@@ -8,14 +8,6 @@ class SettingsViewModel : ViewModel() {
     private val _state = MutableStateFlow(SettingsState())
     val state: StateFlow<SettingsState> = _state
 
-    private fun doSth() {
-        updateState {
-            copy(
-                notificationsEnabled = false
-            )
-        }
-    }
-
     fun toggleNotificationSettings() {
         updateState {
             copy(

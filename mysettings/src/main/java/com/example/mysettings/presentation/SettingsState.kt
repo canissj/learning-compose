@@ -10,8 +10,18 @@ data class SettingsState(
     val themeOption: Theme = Theme.SYSTEM
 )
 
-enum class MarketingOption(val id: Int) {
-    ALLOWED(0), NOT_ALLOWED(1)
+enum class MarketingOption() {
+    ALLOWED, NOT_ALLOWED;
+
+    companion object {
+        fun getEnumByOrdinal(id: Int): MarketingOption {
+            return when (id) {
+                ALLOWED.ordinal -> ALLOWED
+                NOT_ALLOWED.ordinal -> NOT_ALLOWED
+                else -> throw error("No marketing option enum founded for this ordinal")
+            }
+        }
+    }
 }
 
 enum class Theme(@StringRes val label: Int) {

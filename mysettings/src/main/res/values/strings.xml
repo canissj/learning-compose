@@ -6,4 +6,13 @@
     <string name="cd_go_back">Go back to previous screen</string>
     <string name="settings">Settings</string>
     <string name="enable_notifications">Enable notifications</string>
+    <string name="hint_settings">Show hints</string>
+    <string name="cd_manage_subscription">Go to manage subscription</string>
+    <string name="manage_subscription">Manage subscription</string>
+    <string name="marketing_emails">Receive marketing emails?</string>
+
+    <string-array name="setting_options_marketing_choice">
+        <item>Opt-in for marketing emails</item>
+        <item>Don\'t send me emails</item>
+    </string-array>
 </resources>
