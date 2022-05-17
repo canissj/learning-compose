@@ -10,6 +10,7 @@
     <string name="cd_manage_subscription">Go to manage subscription</string>
     <string name="manage_subscription">Manage subscription</string>
     <string name="marketing_emails">Receive marketing emails?</string>
+    <string name="theme_label">Theme</string>
 
     <string-array name="setting_options_marketing_choice">
         <item>Opt-in for marketing emails</item>

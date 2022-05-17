@@ -16,14 +16,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.mysettings.R
-import com.example.mysettings.presentation.MarketingOption
-import com.example.mysettings.presentation.SettingsState
-import com.example.mysettings.presentation.SettingsViewModel
+import com.example.mysettings.presentation.*
+import com.example.mysettings.presentation.nightmode.NightModeManager
 import com.example.mysettings.ui.theme.PracticalJetpackComposeTheme
 
 @Composable
 fun Settings() {
-    val viewModel: SettingsViewModel = viewModel()
+    val viewModel: SettingsViewModel =
+        viewModel(factory = SettingsViewModelFactory(nightModeManager = NightModeManager))
     val state = viewModel.state.collectAsState().value
 
     SettingsList(
@@ -32,7 +32,8 @@ fun Settings() {
         onToggleNotificationSettings = viewModel::toggleNotificationSettings,
         onToggleHintSettings = viewModel::toggleHintSettings,
         onManageSubscriptionClicked = {},
-        onMarketingOptionSelected = viewModel::updateMarketingSettings
+        onMarketingOptionSelected = viewModel::updateMarketingSettings,
+        onThemeSelected = viewModel::updateThemeSettings
     )
 
 }
@@ -44,7 +45,8 @@ fun SettingsList(
     onToggleNotificationSettings: () -> Unit,
     onToggleHintSettings: () -> Unit,
     onManageSubscriptionClicked: () -> Unit,
-    onMarketingOptionSelected: (MarketingOption) -> Unit
+    onMarketingOptionSelected: (MarketingOption) -> Unit,
+    onThemeSelected: (Theme) -> Unit
 ) {
     Column(
         modifier = modifier
@@ -58,7 +60,8 @@ fun SettingsList(
             onToggleNotificationSettings = onToggleNotificationSettings,
             onToggleHintSettings = onToggleHintSettings,
             onManageSubscriptionClicked = onManageSubscriptionClicked,
-            onMarketingOptionSelected = onMarketingOptionSelected
+            onMarketingOptionSelected = onMarketingOptionSelected,
+            onThemeSelected = onThemeSelected
         )
     }
 }
@@ -91,7 +94,8 @@ private fun Content(
     onToggleNotificationSettings: () -> Unit,
     onToggleHintSettings: () -> Unit,
     onManageSubscriptionClicked: () -> Unit,
-    onMarketingOptionSelected: (MarketingOption) -> Unit
+    onMarketingOptionSelected: (MarketingOption) -> Unit,
+    onThemeSelected: (Theme) -> Unit
 ) {
     NotificationSettings(
         modifier = Modifier.fillMaxWidth(),
@@ -119,6 +123,13 @@ private fun Content(
         optionSelected = state.marketingOption,
         onOptionSelected = onMarketingOptionSelected
     )
+    Divider()
+    ThemeSettingItem(
+        modifier = Modifier.fillMaxWidth(),
+        selectedTheme = state.themeOption,
+        onSelectTheme = onThemeSelected
+    )
+    SectionSpacer(modifier = Modifier.fillMaxWidth())
 }
 
 
@@ -131,6 +142,7 @@ fun PreviewSettings() {
             onToggleNotificationSettings = {},
             onToggleHintSettings = {},
             onManageSubscriptionClicked = {},
-            onMarketingOptionSelected = {})
+            onMarketingOptionSelected = {},
+            onThemeSelected = {})
     }
 }
