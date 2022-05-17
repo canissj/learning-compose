@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.mysettings.BuildConfig
 import com.example.mysettings.R
 import com.example.mysettings.presentation.*
 import com.example.mysettings.presentation.nightmode.NightModeManager
@@ -130,6 +131,12 @@ private fun Content(
         onSelectTheme = onThemeSelected
     )
     SectionSpacer(modifier = Modifier.fillMaxWidth())
+    AppVersionSettingItem(
+        version = stringResource(
+            id = R.string.app_version_format,
+            BuildConfig.VERSION_NAME
+        )
+    )
 }
 
 

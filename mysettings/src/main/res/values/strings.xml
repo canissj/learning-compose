@@ -11,6 +11,8 @@
     <string name="manage_subscription">Manage subscription</string>
     <string name="marketing_emails">Receive marketing emails?</string>
     <string name="theme_label">Theme</string>
+    <string name="app_version_setting">App Version</string>
+    <string name="app_version_format">v%s</string>
 
     <string-array name="setting_options_marketing_choice">
         <item>Opt-in for marketing emails</item>
